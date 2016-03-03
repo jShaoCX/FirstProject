@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    
+    android:background="#D3D3D3"
+    tools:context="com.example.cookiemix.PourPage" >
+
+    <TextView android:id="@+id/textView_acceleration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+    
+    <RelativeLayout android:id="@+id/relativeLayout_ingredientBar"
+         android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:layout_below="@id/textView_acceleration"
+         android:background="#555555"
+>
+        <Button android:id="@+id/button_selectFlour"
+            android:background="@drawable/flour_icon"
+            android:layout_margin="5dp"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:onClick="GoToFlour"
+            ></Button>
+        <Button android:id="@+id/button_selectBrownSugar"
+            android:background="@drawable/brownsugar_icon"
+            android:layout_toRightOf="@id/button_selectFlour"
+            android:layout_toEndOf="@id/button_selectFlour"
+            android:layout_margin="5dp"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:onClick="GoToBrownSugar"
+            ></Button>
+        
+        <Button android:id="@+id/button_selectWhiteSugar"
+            android:background="@drawable/whitesugar_icon"
+            android:layout_toRightOf="@id/button_selectBrownSugar"
+            android:layout_toEndOf="@id/button_selectBrownSugar"
+            android:layout_margin="5dp"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:onClick="GoToWhiteSugar"
+            ></Button>
+        
+        <Button android:id="@+id/button_selectEgg"
+            android:background="@drawable/egg_icon"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:onClick="GoToEgg"
+            ></Button>
+        <Button android:id="@+id/button_selectButter"
+            android:background="@drawable/butter_icon"
+            android:layout_toLeftOf="@id/button_selectEgg"
+            android:layout_toStartOf="@id/button_selectEgg"
+            android:layout_margin="5dp"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:onClick="GoToButter"
+            ></Button>
+        
+    </RelativeLayout>
+    
+    <ImageView android:id="@+id/imageView_icon"
+        android:layout_below="@id/relativeLayout_ingredientBar"
+        android:src="@drawable/flour_icon"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"/>
+    
+    <Button android:id="@+id/button_startMixing"
+        android:layout_alignParentBottom="true"
+        android:text="@string/button_StartMixing_label"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:onClick="StartMixing">
+    </Button>
+    
+    <ImageView android:id="@+id/imageView_pourAmount"
+        android:layout_above="@id/button_startMixing"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"></ImageView>
+
+</RelativeLayout>
